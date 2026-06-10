@@ -65,11 +65,11 @@ class JsonLogParserTest {
     @Test
 
     void testParseFile() throws IOException {
-        Path logFile = Path.of("src/test/resources/admin.log");
+        Path logFile = Path.of("src/test/resources/sample.log");
 
         JsonLogParser parser = new JsonLogParser();
         List<JsonNode> result = parser.parseLogFile(logFile.toString());
 
-        assertEquals(2151, result.size());
+        assertEquals(5, result.size());
     }
 }

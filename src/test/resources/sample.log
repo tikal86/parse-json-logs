@@ -1,0 +1,5 @@
+{"level":"INFO","message":"Application started","timestamp":"2024-01-01T10:00:00Z","user":"admin"}
+{"level":"DEBUG","message":"Processing request","timestamp":"2024-01-01T10:01:00Z","user":"john","requestId":"req-123"}
+{"level":"ERROR","message":"Connection failed","timestamp":"2024-01-01T10:02:00Z","user":"jane","error":"timeout"}
+{"level":"WARN","message":"Memory usage high","timestamp":"2024-01-01T10:03:00Z","memoryMB":850}
+{"level":"INFO","message":"Request completed","timestamp":"2024-01-01T10:04:00Z","user":"john","requestId":"req-123","duration":250}
