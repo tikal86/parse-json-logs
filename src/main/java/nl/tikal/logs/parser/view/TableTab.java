@@ -238,7 +238,7 @@ public class TableTab extends Tab {
 
         final var activeFilters = columnFilters.size();
         final var filterStatus = activeFilters > 0 ? " (" + activeFilters + " filter(s) active)" : "";
-//        statusLabel.setText("Showing " + filteredData.size() + " of " + allData.size() + " entries" + filterStatus);
+        StatusPanel.changeStatus(filterStatus);
     }
 
     public String getColumnStatus() {
