@@ -55,13 +55,13 @@ public class JsonLogParserApp extends Application {
         tableTab = new TableTab("Table View");
 
         // Tab 2: Gantt Chart
-        Tab ganttTab = new Tab("Gantt Chart");
-        ganttTab.setClosable(false);
-        ganttPane = new Pane();
-        ganttScrollPane = new ScrollPane(ganttPane);
-        ganttScrollPane.setFitToWidth(true);
-        ganttScrollPane.setStyle("-fx-background-color: white;");
-        ganttTab.setContent(ganttScrollPane);
+        ganttTab = new GanttTab("Gantt Chart");
+//        ganttTab.setClosable(false);
+//        ganttPane = new Pane();
+//        ganttScrollPane = new ScrollPane(ganttPane);
+//        ganttScrollPane.setFitToWidth(true);
+//        ganttScrollPane.setStyle("-fx-background-color: white;");
+//        ganttTab.setContent(ganttScrollPane);
         
         tabPane.getTabs().addAll(tableTab, ganttTab);
         root.setCenter(tabPane);
@@ -134,7 +134,7 @@ public class JsonLogParserApp extends Application {
             StatusPanel.changeStatus("Loaded " + jsonObjects.size() + " entries from " + file.getName() + tableTab.getColumnStatus());
             
             // Build Gantt chart
-            ganttTab.buildGanttChart();
+            ganttTab.buildGanttChart(jsonObjects);
             
         } catch (final IOException ex) {
             StatusPanel.changeStatus("Error loading file: " + ex.getMessage());
